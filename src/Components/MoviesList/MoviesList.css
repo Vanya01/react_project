@@ -1,0 +1,10 @@
+.main_content{
+    flex-wrap: wrap;
+
+}
+.wrap_list{
+    background: #f0efee;
+}
+.main_content{
+    justify-content: space-between;
+}

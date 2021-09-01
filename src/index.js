@@ -4,14 +4,29 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {createStore} from "redux";
+import {Provider} from "react-redux";
+
+let initialState = {movies:[]}
+
+const reducer = ( state = initialState,action)=>{
+     switch (action.type){
+         case "FETCH_MOVIES":
+             return {...state,movies:action.payload}
+         default: return state
+     }
+}
 
 
 
+let store = createStore(reducer)
+console.log(store)
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+      <React.StrictMode>
+      <Provider store={store}>
+        <App />
+      </Provider>
+      </React.StrictMode>,
   document.getElementById('root')
 );
 

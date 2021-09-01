@@ -1,0 +1,40 @@
+.header{
+    justify-content: space-between;
+    padding-top: 20px;
+    align-items: center;
+    background: white;
+}
+
+.menu_burger{
+    width: 40px;
+    height: 2px;
+    background: black;
+    position: relative;
+}
+.menu_burger:before{
+    content: '';
+    height: 2px;
+    width: 40px;
+    bottom: 10px;
+    background: black;
+    position: absolute;
+}
+.menu_burger:after{
+    content: '';
+    height: 2px;
+    top: 10px;
+    width: 40px;
+    position: absolute;
+    background: black;
+}
+
+
+.top_input{
+    width: 440px;
+    padding: 10px ;
+    border-radius: 10px;
+    cursor: alias;
+}
+.user>p{
+    margin-left: 10px;
+}
