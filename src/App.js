@@ -6,12 +6,10 @@ import {MoviesList} from "./Components/MoviesList/MoviesList";
 
 function App() {
 
-
   return (
      <div className="Main_div">
          <Header/>
          <MoviesList/>
-
     </div>
   );
 }

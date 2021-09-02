@@ -1,4 +1,4 @@
-import React, {useReducer} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
@@ -6,20 +6,20 @@ import reportWebVitals from './reportWebVitals';
 import {createStore} from "redux";
 import {Provider} from "react-redux";
 
-let initialState = {movies:[]}
+let initialState = {movie:[],genre:[]}
 
-const reducer = ( state = initialState,action)=>{
+
+const reducer = ( state = initialState, action)=>{
      switch (action.type){
          case "FETCH_MOVIES":
-             return {...state,movies:action.payload}
-         default: return state
+             return {...state,movie:[action.payload]}
+         case "GET_GENRES":
+             return {...state,genre:[action.payload]}
+         default: return {state}
      }
 }
 
-
-
 let store = createStore(reducer)
-console.log(store)
 
 ReactDOM.render(
       <React.StrictMode>
