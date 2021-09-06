@@ -38,3 +38,14 @@
 .user>p{
     margin-left: 10px;
 }
+.change_btn{
+    box-sizing: inherit;
+    border-radius: 20px;
+    padding: 10px;
+    border: 2px solid darkblue;
+    width: 100px;
+    height: 30px;
+    color: mediumblue;
+    cursor:pointer ;
+    background: black;
+}

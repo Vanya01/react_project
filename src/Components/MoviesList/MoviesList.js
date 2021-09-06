@@ -3,12 +3,14 @@ import './MoviesList.css'
 
 
 function MoviesList(){
-
-
     return(
+
         <div className={'wrap_list'}>
+
             <MoviesInfo/>
+
         </div>
+
     )
 }
 

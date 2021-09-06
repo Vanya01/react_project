@@ -1,0 +1,49 @@
+
+.aboutInfo{
+    width: 100%;
+    text-align: center;
+    margin-top: 10vh;
+}
+
+.aboutInfo>img{
+    width: 300px;
+}
+.wrap_about{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.wrap_about>a{
+    text-decoration: none;
+    color: darkorchid;
+    font-weight: bold;
+    border: 2px;
+    background-color: mediumblue;
+    border-radius:10px;
+    padding: 7px;
+}
+
+
+
+
+.wrap_about>a:hover{
+    background-color: darkorchid;
+    color: mediumblue;
+    transition: 500ms;
+}
+
+.title{
+    text-align: center;
+    font-size: 120%;
+}
+.title>p{
+    color: grey;
+}
+.overview{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 100px;
+    padding-bottom: 200px;
+    max-width: 350px;
+    margin-left: 42vh;
+}
