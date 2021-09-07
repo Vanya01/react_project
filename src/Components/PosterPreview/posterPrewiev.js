@@ -9,7 +9,7 @@ function PosterPreview(props){
    const movieId = movie.filter(value => id.indexOf(value.id) !==-1)
 
     return(
-             <div>
+             <div className={'wrap_posterPrewiev'}>
                  {
                      movieId.map(value => {
                     return(

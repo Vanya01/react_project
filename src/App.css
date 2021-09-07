@@ -1,6 +1,25 @@
 .container{
   width: 1024px;
-margin: 0 auto ;}
+ margin: 0 auto ;}
+
+.change_theme{
+    position: fixed;
+    margin:200px 0 0 10px;
+    text-decoration: none;
+    color: darkorchid;
+    font-weight: bold;
+    border: 2px;
+    background-color: mediumblue;
+    border-radius:10px;
+    padding: 7px;
+}
+.change_theme:hover{
+    background-color: darkorchid;
+    color: mediumblue;
+    transition: 500ms;
+    cursor: pointer;
+
+}
 
 .d-flex{
   display: flex;

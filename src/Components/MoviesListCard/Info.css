@@ -1,12 +1,17 @@
 .out_wrap_card {
-flex-wrap: wrap;
-    padding:10px ;
+    flex-wrap: wrap;
+    padding:150px;
 }
+
+
+.wrap_one{
+    padding:0;
+}
+
 
 .wrap_cards{
     padding: 10px;
     width: 220px;
-    background: white;
     margin: 0 10px 20px 0;
 }
 
@@ -49,6 +54,7 @@ flex-wrap: wrap;
 
 .stars_and_fb{
     justify-content: space-between;
+
 }
 
 .wrap_genres{
@@ -62,4 +68,7 @@ flex-wrap: wrap;
     padding: 10px;
     width: 15px;
     height: 15px;
+}
+.pages{
+  margin:20px 0  0 350px ;
 }

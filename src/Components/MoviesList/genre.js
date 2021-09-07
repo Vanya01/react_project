@@ -9,7 +9,7 @@ function GenresFunction({genresId}){
     return(
         <div className={'wrap_type'}>
             {
-                genresName.map(value=> <div className={'wrap_genre'}>{value.name}</div>)
+                genresName.map(value=> <div className={'wrap_genre'}> {value.name}</div>)
             }
         </div>)
 }
