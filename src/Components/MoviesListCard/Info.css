@@ -3,6 +3,10 @@
     padding:150px;
 }
 
+.wrapper{
+position: relative;
+}
+
 
 .wrap_one{
     padding:0;
@@ -10,6 +14,8 @@
 
 
 .wrap_cards{
+    word-wrap: break-word;
+    height: 800px;
     padding: 10px;
     width: 220px;
     margin: 0 10px 20px 0;
@@ -69,6 +75,8 @@
     width: 15px;
     height: 15px;
 }
+
+
 .pages{
-  margin:20px 0  0 350px ;
+  margin:100px 0  0 350px;
 }

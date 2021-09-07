@@ -10,6 +10,8 @@ import {Link} from "react-router-dom";
 import {Pagination} from "@material-ui/lab";
 
 
+
+
 export function MoviesInfo(){
     let state = useSelector(state => state)
     let dispatch = useDispatch()
@@ -18,14 +20,15 @@ export function MoviesInfo(){
     let totalPages = state.totalPages
 
     let handleChange = (event,value) => {
-            dispatch( {type:'GET_PAGES',payload:(value)}); }
+            dispatch( {type:'GET_PAGES',payload:(value)});}
 
 
     useEffect( ()=>{
-        getMovies(pages).then(value => {
+        getMovies().then(value => {
             dispatch(
-            {type: 'FETCH_MOVIES', payload:(value.data)})
-            dispatch({type:'TOTAL_PAGES',payload:(value.data.total_pages)})
+                {type: 'FETCH_MOVIES', payload:(value.data)})
+            dispatch(
+                {type:'TOTAL_PAGES',payload:(value.data.total_pages)})
     })
         getGenres().then(value => dispatch(
             {type:'GET_GENRES',payload:(value.data.genres)
@@ -76,5 +79,4 @@ export function MoviesInfo(){
                                <Pagination count={totalPages}  color="secondary" onChange={handleChange}/>
                         </div>
         </div>
-
     )}
