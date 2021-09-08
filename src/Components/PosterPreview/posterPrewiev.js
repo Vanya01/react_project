@@ -3,17 +3,18 @@ import {Link} from "react-router-dom";
 import './PosterPreview.css'
 
 function PosterPreview(props){
-       let {match:{params:{id}}} = props
+
+       let {match:{params: {id}}} = props
 
     let movie = useSelector(({movie})=> movie);
-   const movieId = movie.filter(value => id.indexOf(value.id) !==-1)
+    const movieId = movie.filter(value => id.indexOf(value.id) !==-1)
 
     return(
              <div className={'wrap_posterPrewiev'}>
                  {
                      movieId.map(value => {
                     return(
-                          <div className={'wrap_about container'}>
+                          <div key={value.id} className={'wrap_about container'}>
                                <Link to={'/home'}>
                                    Move back
                                </Link>
@@ -31,7 +32,6 @@ function PosterPreview(props){
                            )
                      })
                  }
-
              </div>
         )
 }

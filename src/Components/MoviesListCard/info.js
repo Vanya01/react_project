@@ -5,9 +5,10 @@ import './Info.css'
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
 import {getGenres, getMovies} from "../services/movie_service";
-import {GenresFunction} from "../MoviesList/genre";
+import {GenresFunction} from "../- GenreBadge/genre";
 import {Link} from "react-router-dom";
 import {Pagination} from "@material-ui/lab";
+import {Badge} from "@material-ui/core"
 
 
 
@@ -19,12 +20,10 @@ export function MoviesInfo(){
     let pages = state.pages
     let totalPages = state.totalPages
 
-    let handleChange = (event,value) => {
-            dispatch( {type:'GET_PAGES',payload:(value)});}
 
 
     useEffect( ()=>{
-        getMovies().then(value => {
+        getMovies(pages).then(value => {
             dispatch(
                 {type: 'FETCH_MOVIES', payload:(value.data)})
             dispatch(
@@ -36,19 +35,20 @@ export function MoviesInfo(){
     },[pages])
 
 
-
-
+    let handleChange = (event,value) => {
+        dispatch( {type:'GET_PAGES',payload:(value)})
+        ;}
 
     return(
         <div className={'out_wrap_card d-flex container'}>
         {
             movies && movies.map(value=>
-                <div className={'wrapper'}>
-                <div key={value.id} className={'wrap_cards'}>
-
+                <div  key={value.id} className={'wrapper'}>
+                <div className={'wrap_cards'}>
                     <Link to={`/about/${value.id}`}>
 
                      <div className={'img_card'}>
+                     <Badge badgeContent={value.vote_average} color={value.vote_average>7?'primary':'secondary'  }/>
                        <img src={`https://image.tmdb.org/t/p/w500${value.poster_path}`} alt="Poster"/>
                      </div>
 
@@ -64,9 +64,9 @@ export function MoviesInfo(){
                         <div className="wrap_text">
                             <p>{value.overview}</p>
                         </div>
-                        <hr/>
+                        <hr className={'hr'}/>
                         <div className={'stars_and_fb d-flex'}>
-                            <Stars/> {value.vote_average}
+                            <Stars/>
                             <img src={fb} alt="fb"/>
                         </div>
                     </div>
@@ -75,7 +75,7 @@ export function MoviesInfo(){
 
             )
         }
-                        <div className={'pages'}>
+                        <div className={'pagination'}>
                                <Pagination count={totalPages}  color="secondary" onChange={handleChange}/>
                         </div>
         </div>

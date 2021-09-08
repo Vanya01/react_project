@@ -12,10 +12,21 @@ position: relative;
     padding:0;
 }
 
+.wrap_genres{
+    height: 40px;
+    padding: 10px 0 20px 0;
+}
+
+.wrap_text>h3{
+   height: 50px;
+}
+.wrap_text>p{
+    height: 250px;
+    overflow: hidden;
+}
 
 .wrap_cards{
     word-wrap: break-word;
-    height: 800px;
     padding: 10px;
     width: 220px;
     margin: 0 10px 20px 0;
@@ -25,7 +36,8 @@ position: relative;
     text-align: center;
 }
 .wrap_cards>p{
-    font-weight: revert;
+    font-weight: bold;
+
 }
 
 .img_card>img{
@@ -77,6 +89,6 @@ position: relative;
 }
 
 
-.pages{
+.pagination{
   margin:100px 0  0 350px;
 }
