@@ -1,5 +1,8 @@
 import axios from "axios";
 
+
+ const API_KEY='09569995109a57a2e8c35b35923c769b'
+
 let instance = axios.create({
     baseURL:'https://api.themoviedb.org/3/',
     headers:{
@@ -14,4 +17,4 @@ const getGenres = async ()=> await instance.get(`genre/movie/list`)
 
 
 
-export {getMovies,getGenres}
+export {getMovies,getGenres,API_KEY}

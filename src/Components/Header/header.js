@@ -4,11 +4,15 @@ import './header.css'
 
 
 function Header(){
+
     return(
+
         <header className={`main_header  container`}>
             <div className={`header d-flex  `} >
                 <img src={logo} alt="logo" onClick={() => window.scroll(0,0)}/>
                 <span className={'menu_burger'}> </span>
+
+
                 <form className={'form'}>
                     <input className={'top_input'} type="text" placeholder={'Let me find your movie'} />
                 </form>

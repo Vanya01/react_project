@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
@@ -16,14 +16,17 @@ let initialState = {
 }
 
 
+
+
 const reducer = ( state = initialState, action)=>{
+
+
      switch (action.type){
          case "FETCH_MOVIES":
              return {...state,movie:[...action.payload.results]}
          case "GET_GENRES":
              return {...state,genre:[...action.payload]}
          case "GET_PAGES":
-             console.log(action.payload)
                 return {...state,pages: action.payload}
          case "TOTAL_PAGES":
              return {...state,totalPages: action.payload}
@@ -37,7 +40,7 @@ let store = createStore(reducer)
 ReactDOM.render(
       <React.StrictMode>
         <Provider store={store}>
-           <App  />
+           <App/>
         </Provider>
       </React.StrictMode>,
   document.getElementById('root')
