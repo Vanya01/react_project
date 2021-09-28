@@ -2,6 +2,7 @@ import axios from "axios";
 
 
  const API_KEY='09569995109a57a2e8c35b35923c769b'
+ const BASE_URL = 'https://api.themoviedb.org/3/'
 
 let instance = axios.create({
     baseURL:'https://api.themoviedb.org/3/',
@@ -12,9 +13,7 @@ let instance = axios.create({
 
 const getMovies = async (pages)=> await axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=bcb4edb29b0de1fbbb2ebc6d8cbeaee5&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${pages}`)
 const getGenres = async ()=> await instance.get(`genre/movie/list`)
+const searchUrl = BASE_URL + '/search/movie?' + API_KEY
+const serchAPI = 'https://api.themoviedb.org/3/search/movie?&api_key=09569995109a57a2e8c35b35923c769b&query='
 
-
-
-
-
-export {getMovies,getGenres,API_KEY}
+export {getMovies,getGenres,API_KEY,searchUrl,BASE_URL,serchAPI}

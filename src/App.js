@@ -3,7 +3,6 @@ import {Header} from "./Components/Header/header";
 import {MoviesList} from "./Components/MoviesList/MoviesList";
 import {GlobalStyles} from "./Components/themes/globalStyles";
 import {lightTheme,darkTheme} from "./Components/themes/Themes";
-import {useDarkMode} from "./Components/themes/useDarkMode";
 import {
     BrowserRouter,
     Switch,
@@ -17,13 +16,21 @@ import {useState} from "react";
 
 
      function App() {
+
          const [theme, setTheme] = useState ( 'light');
+
+
 
          const themeToggler = () => {
 
              theme === 'light' ? setTheme('dark') : setTheme('light')
 
          }
+
+
+
+
+
 
   return (
 

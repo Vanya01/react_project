@@ -3,8 +3,8 @@ import Stars from "../stars/stars";
 import fb from "../imgs/Facebook.png";
 import './Info.css'
 import {useDispatch, useSelector} from "react-redux";
-import {useEffect} from "react";
-import {getGenres, getMovies} from "../services/movie_service";
+import React, {useEffect, useState} from "react";
+import {API_KEY, getGenres, getMovies, serchAPI} from "../services/movie_service";
 import {GenresFunction} from "../- GenreBadge/genre";
 import {Link} from "react-router-dom";
 import {Pagination} from "@material-ui/lab";
@@ -39,8 +39,13 @@ export function MoviesInfo(){
         dispatch( {type:'GET_PAGES',payload:(value)})
         ;}
 
+
+
+
+
     return(
         <div className={'out_wrap_card d-flex container'}>
+
         {
             movies && movies.map(value=>
                 <div  key={value.id} className={'wrapper'}>
