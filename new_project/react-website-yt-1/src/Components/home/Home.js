@@ -1,19 +1,18 @@
-import React from "react";
+import React from 'react';
 import '../../App.css';
-import Hero from "../Hero/Hero";
-import Cards from "../CardItems/cards";
-import Footer from "../Footer/Footer";
+import Hero from '../Hero/Hero';
+import Cards from '../CardItems/cards';
+import Footer from '../Footer/Footer';
 
 
-function Home (){
-
-  return(
-  <>
-    <Hero/>
-    <Cards/>
-    <Footer/>
-</>
-  )
+function Home() {
+    return (
+        <>
+            <Hero/>
+            <Cards/>
+            <Footer/>
+        </>
+    )
 }
 
-export default Home
+export default Home;

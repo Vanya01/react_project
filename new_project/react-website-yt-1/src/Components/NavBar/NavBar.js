@@ -1,9 +1,9 @@
-import React,{useState,useEffect} from "react";
+import React,{useState,useEffect} from 'react';
 import {
     Link
-} from "react-router-dom";
-import './NavBar.css'
-import {ButtonNav} from "./ButtonForNav/buttonNav";
+} from 'react-router-dom';
+import './NavBar.css';
+import {ButtonNav} from './ButtonForNav/buttonNav';
 
 function NavBar(){
     const [click,setClick] = useState(false)
@@ -35,7 +35,7 @@ function NavBar(){
                      TRVL <i className="fab fa-typo3"/>
 
                   </Link>
-                  <div className={"menu-icon"} onClick={handleClick}>
+                  <div className={'menu-icon'} onClick={handleClick}>
                   <i className={click ? 'fas fa-times' : 'fas fa-bars'}/>
                   </div>
                   <ul className={click ? 'nav-menu active' : 'nav-menu'}>
@@ -60,4 +60,4 @@ function NavBar(){
     )
 }
 
-export default NavBar
+export default NavBar;
