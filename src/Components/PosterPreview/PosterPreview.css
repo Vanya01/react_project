@@ -1,52 +1,53 @@
-.wrap_posterPrewiev{
-    padding: 80px 0 100px 0 ;
+.wrap_posterPrewiev {
+    padding: 80px 0 100px 0;
 }
 
-.aboutInfo{
+.aboutInfo {
     padding-top: 18px;
-    text-align: center}
+    text-align: center
+}
 
 
-.aboutInfo>img{
+.aboutInfo > img {
     width: 300px;
 }
-.wrap_about{
+
+.wrap_about {
     width: 100%;
     text-align: center;
     margin-top: 20px;
 }
 
-.wrap_about>a{
-     position: absolute;
+.wrap_about > a {
+    position: absolute;
     text-decoration: none;
     color: darkorchid;
     font-weight: bold;
     border: 2px;
     background-color: mediumblue;
-    border-radius:10px;
+    border-radius: 10px;
     padding: 7px;
-    left: 1% ;
-    top:20% ;
+    left: 1%;
+    top: 20%;
 }
 
 
-
-
-.wrap_about>a:hover{
+.wrap_about > a:hover {
     background-color: darkorchid;
     color: mediumblue;
     transition: 500ms;
 }
 
-.title{
+.title {
     text-align: center;
     font-size: 120%;
 }
-.overview>p{
+
+.overview > p {
 
 }
 
-.overview{
+.overview {
     margin-left: 38%;
     width: 25%;
 }
