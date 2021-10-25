@@ -12,15 +12,15 @@ function Search() {
 
 
     const fetchSearch = async (data) => {
-        console.log(data)
         await axios.get(`https://api.themoviedb.org/3/search/${type ? "tv" : "movie"}?api_key=09569995109a57a2e8c35b35923c769b&language=en-US&query=${searchText}&page=${page}&include_adult=false`)
-            setContent(data.results);
-            setNumOfPage(data.totalPages);
+        setContent(data.results);
+        setNumOfPage(data.totalPages);
     }
-   useEffect(()=>{
-        window.scroll(0,0);
-        fetchSearch();
-   },[type,page])
+
+    useEffect(() => {
+        window.scroll(0, 0);
+        fetchSearch(searchText);
+    }, [type, page])
 
     return (
         <div style={{display: 'flex', margin: '15px, 0'}}>
